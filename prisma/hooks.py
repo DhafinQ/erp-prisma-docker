@@ -1,7 +1,7 @@
 app_name = "prisma"
 app_title = "Prisma"
 app_publisher = "Yayasan A"
-app_description = "Platform Rekapitulasi Informasi Sekolah & Manajemen Anggaran."
+app_description = "Platform Rekapitulasi Informasi Sekolah & Manajemen Anggaran"
 app_email = "sekretaris.yayasana@mail.com"
 app_license = "mit"
 
@@ -256,3 +256,29 @@ app_license = "mit"
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
+
+fixtures = [
+    # 1. Ekspor konfigurasi Workflow utama
+    {
+        "dt": "Workflow", 
+        "filters": [
+            ["name", "=", "Persetujuan Dokumen"]
+        ]
+    },
+    
+    # 2. Ekspor daftar Status (States) yang ada di tabel Document States
+    {
+        "dt": "Workflow State", 
+        "filters": [
+            ["name", "in", ["Draft", "Diperiksa", "Diketahui", "Disetujui"]]
+        ]
+    },
+    
+    # 3. Ekspor nama Aksi (Actions) yang ada di tabel Transitions
+    {
+        "dt": "Workflow Action Master", 
+        "filters": [
+            ["name", "in", ["Periksa", "Ketahui", "Setujui"]]
+        ]
+    }
+]
