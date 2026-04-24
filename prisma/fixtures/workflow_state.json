@@ -3,15 +3,6 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
-  "modified": "2026-04-20 14:03:48.862433",
-  "name": "Diperiksa",
-  "style": "",
-  "workflow_state_name": "Diperiksa"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow State",
-  "icon": "",
   "modified": "2026-04-20 14:03:40.657335",
   "name": "Draft",
   "style": "",
@@ -21,18 +12,9 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
-  "modified": "2026-04-20 14:04:10.165321",
-  "name": "Diketahui",
+  "modified": "2026-04-24 02:41:28.411555",
+  "name": "Pending Approval",
   "style": "",
-  "workflow_state_name": "Diketahui"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow State",
-  "icon": "",
-  "modified": "2026-04-20 14:04:35.031869",
-  "name": "Disetujui",
-  "style": "",
-  "workflow_state_name": "Disetujui"
+  "workflow_state_name": "Pending Approval"
  }
 ]

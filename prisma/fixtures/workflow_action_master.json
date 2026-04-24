@@ -2,22 +2,15 @@
  {
   "docstatus": 0,
   "doctype": "Workflow Action Master",
-  "modified": "2026-04-20 14:09:10.145337",
-  "name": "Periksa",
-  "workflow_action_name": "Periksa"
+  "modified": "2026-04-24 02:42:33.737297",
+  "name": "Ajukan Persetujuan",
+  "workflow_action_name": "Ajukan Persetujuan"
  },
  {
   "docstatus": 0,
   "doctype": "Workflow Action Master",
-  "modified": "2026-04-20 14:11:04.894429",
-  "name": "Ketahui",
-  "workflow_action_name": "Ketahui"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow Action Master",
-  "modified": "2026-04-20 14:10:18.293246",
-  "name": "Setujui",
-  "workflow_action_name": "Setujui"
+  "modified": "2026-04-24 02:43:29.432718",
+  "name": "Sahkan Pembayaran",
+  "workflow_action_name": "Sahkan Pembayaran"
  }
 ]

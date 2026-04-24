@@ -2,16 +2,16 @@
  {
   "docstatus": 0,
   "doctype": "Workflow",
-  "document_type": "Journal Entry",
+  "document_type": "Payment Entry",
   "enable_action_confirmation": 0,
   "is_active": 1,
-  "modified": "2026-04-20 14:53:45.620532",
-  "name": "Persetujuan Dokumen",
+  "modified": "2026-04-24 02:43:44.216271",
+  "name": "Approval Pembayaran TK",
   "override_status": 0,
-  "send_email_alert": 0,
+  "send_email_alert": 1,
   "states": [
    {
-    "allow_edit": "Administrator",
+    "allow_edit": "Bendahara",
     "avoid_status_override": 0,
     "doc_status": "0",
     "evaluate_as_expression": 0,
@@ -25,7 +25,7 @@
     "workflow_builder_id": null
    },
    {
-    "allow_edit": "Administrator",
+    "allow_edit": "Kepala Sekolah",
     "avoid_status_override": 0,
     "doc_status": "0",
     "evaluate_as_expression": 0,
@@ -33,27 +33,13 @@
     "message": null,
     "next_action_email_template": null,
     "send_email": 1,
-    "state": "Diperiksa",
+    "state": "Pending Approval",
     "update_field": null,
     "update_value": null,
     "workflow_builder_id": null
    },
    {
-    "allow_edit": "Administrator",
-    "avoid_status_override": 0,
-    "doc_status": "0",
-    "evaluate_as_expression": 0,
-    "is_optional_state": 0,
-    "message": null,
-    "next_action_email_template": null,
-    "send_email": 1,
-    "state": "Diketahui",
-    "update_field": null,
-    "update_value": null,
-    "workflow_builder_id": null
-   },
-   {
-    "allow_edit": "Administrator",
+    "allow_edit": "Kepala Sekolah",
     "avoid_status_override": 0,
     "doc_status": "1",
     "evaluate_as_expression": 0,
@@ -61,7 +47,7 @@
     "message": null,
     "next_action_email_template": null,
     "send_email": 1,
-    "state": "Disetujui",
+    "state": "Approved",
     "update_field": null,
     "update_value": null,
     "workflow_builder_id": null
@@ -69,41 +55,30 @@
   ],
   "transitions": [
    {
-    "action": "Periksa",
+    "action": "Ajukan Persetujuan",
     "allow_self_approval": 1,
-    "allowed": "Administrator",
+    "allowed": "Bendahara",
     "condition": null,
-    "next_state": "Diperiksa",
+    "next_state": "Pending Approval",
     "send_email_to_creator": 0,
     "state": "Draft",
     "transition_tasks": null,
     "workflow_builder_id": null
    },
    {
-    "action": "Ketahui",
+    "action": "Sahkan Pembayaran",
     "allow_self_approval": 1,
-    "allowed": "Administrator",
+    "allowed": "Kepala Sekolah",
     "condition": null,
-    "next_state": "Diketahui",
+    "next_state": "Approved",
     "send_email_to_creator": 0,
-    "state": "Diperiksa",
-    "transition_tasks": null,
-    "workflow_builder_id": null
-   },
-   {
-    "action": "Setujui",
-    "allow_self_approval": 1,
-    "allowed": "Administrator",
-    "condition": null,
-    "next_state": "Disetujui",
-    "send_email_to_creator": 0,
-    "state": "Diketahui",
+    "state": "Pending Approval",
     "transition_tasks": null,
     "workflow_builder_id": null
    }
   ],
   "workflow_data": null,
-  "workflow_name": "Persetujuan Dokumen",
+  "workflow_name": "Approval Pembayaran TK",
   "workflow_state_field": "workflow_state"
  }
 ]

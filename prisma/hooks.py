@@ -280,5 +280,55 @@ fixtures = [
         "filters": [
             ["name", "in", ["Periksa", "Ketahui", "Setujui"]]
         ]
+    },
+
+    # ============= Approval Payment ========================
+    # 1. Mengekspor Role (Peran)
+    {
+        "dt": "Role",
+        "filters": [
+            ["name", "in", ["Bendahara TK", "Kepala Sekolah"]]
+        ]
+    },
+    
+    # 2. Mengekspor Hak Akses (Custom DocPerm) untuk Payment Entry
+    {
+        "dt": "Custom DocPerm",
+        "filters": [
+            ["parent", "=", "Payment Entry"],
+            ["role", "in", ["Bendahara TK", "Kepala Sekolah"]]
+        ]
+    },
+    
+    # 3. Mengekspor Struktur Workflow
+    {
+        "dt": "Workflow",
+        "filters": [
+            ["name", "=", "Approval Pembayaran TK"]
+        ]
+    },
+    
+    # 4. Mengekspor Status Workflow (States)
+    {
+        "dt": "Workflow State",
+        "filters": [
+            ["name", "in", ["Draft", "Pending Approval", "Disahkan"]]
+        ]
+    },
+    
+    # 5. Mengekspor Tombol Aksi Workflow (Actions)
+    {
+        "dt": "Workflow Action Master",
+        "filters": [
+            ["name", "in", ["Ajukan Persetujuan", "Sahkan Pembayaran"]]
+        ]
+    },
+    
+    # 6. Mengekspor Customer Group (Wadah Siswa)
+    {
+        "dt": "Customer Group",
+        "filters": [
+            ["name", "=", "Siswa TK"]
+        ]
     }
 ]
